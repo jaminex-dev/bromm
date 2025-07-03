@@ -1,0 +1,348 @@
+/**
+ * ESTILOS PARA LA APLICACIÓN PWA 
+ * =======================================================
+ * 
+ * Este archivo contiene todos los estilos CSS para la aplicación
+ * de registro de pesajes de minerales. Los estilos están organizados
+ * en secciones lógicas para facilitar el mantenimiento.
+ * 
+ * Secciones:
+ * 1. Barra de navegación
+ * 2. Footer
+ * 3. Menús desplegables
+ * 4. Pestañas
+ * 5. Layout principal
+ * 6. Formularios
+ * 7. Tablas
+ * 8. Botones CRUD
+ * 9. Estados y notificaciones
+ */
+
+/* ===== ESTILOS PERSONALIZADOS PARA SWEETALERT2 ===== */
+.swal2-popup {
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.swal2-title {
+    color: #1976d2;
+    font-size: 1.5rem;
+}
+
+.swal2-content {
+    color: #333;
+    font-size: 1rem;
+}
+
+.swal2-confirm {
+    background-color: #1976d2 !important;
+    border-radius: 5px;
+}
+
+.swal2-cancel {
+    background-color: #dc3545 !important;
+    border-radius: 5px;
+}
+
+/* ===== 1. BARRA DE NAVEGACIÓN ===== */
+.navbar-custom {
+    background-color: #5c80c0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+
+.navbar-custom .navbar-brand:hover, 
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ffffff;
+}
+
+/* ===== 2. FOOTER ===== */
+.footer {
+        background-color: #5c80c0;
+        color: #ffffff;
+        padding: 10px 0;
+        text-align: center;
+        bottom: 0;
+        width: 100%;
+}
+
+/* ===== 3. MENÚS DESPLEGABLES ===== */
+.dropdown-menu {
+    background-color: #5c80c0;
+}
+
+.dropdown-item {
+    color: #000000;
+}
+
+.dropdown-item:hover {
+    color: #ffffff !important;
+}
+
+.input-sm {
+        margin-left: 0px;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        border-radius: 0.2rem;
+}
+
+/* ===== 4. SISTEMA DE PESTAÑAS ===== */
+.tabs {
+    margin-top: 20px;
+    display:block;
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.btn-primary {
+    color: #fff;
+    background-color: #5c80c0;
+    border-color: #5c80c0;
+}
+
+
+.tab{
+    border-top: 0px;
+    padding:5px 5px;
+    margin-right: 5px;
+    font-size: 0.9em;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px 10px 0 0;
+    float: left;
+    background: #5c80c0;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-align: center;
+    list-style: none!important;
+    transition: all 200ms;
+}
+
+.tab:hover {
+    background-color: #1d75fb;
+}
+
+.tab.active {
+    background-color: #1d75fb;
+    color: #ffffff;
+}
+
+
+/* ===== BOTÓN HAMBURGUESA PERSONALIZADO ===== */
+.custom-toggler {
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+}
+
+.custom-toggler .toggler-icon {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
+    border-radius: 2px; 
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-toggler:hover .toggler-icon {
+    background-color: #f0f0f0;
+}
+
+/* ===== 5. LAYOUT PRINCIPAL ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 40px;
+}
+
+/* ===== 6. SECCIÓN DE FORMULARIO ===== */
+.form-section {
+    flex: 1;
+    margin-right: 40px;
+    background: #fff;
+    padding: 24px 24px 16px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h1 {
+    color: #1976d2;
+    margin-bottom: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+select, input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+button {
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #1256a3;
+}
+
+/* ===== 7. SECCIÓN DE TABLA ===== */
+.table-section {
+    flex: 2;
+    background: #fff;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#tabla-pesajes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+#tabla-pesajes th, #tabla-pesajes td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabla-pesajes th {
+    background-color: #1976d2;
+    color: white;
+}
+
+#tabla-pesajes tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tabla-pesajes tr:hover {
+    background-color: #e3f0ff;
+}
+
+/* ===== 8. BOTONES CRUD ===== */
+.crud-btn {
+    background: none;
+    border: none;
+    color: #1976d2;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 0 4px;
+}
+
+.crud-btn:hover {
+    color: #d32f2f;
+}
+
+/* ===== 9. ESTADOS Y NOTIFICACIONES ===== */
+.status {
+    margin-top: 10px;
+    font-size: 0.95em;
+    color: #1976d2;
+}
+
+/* ===== 10. ESTADO DE EDICIÓN ===== */
+.fila-editando {
+    background-color: #fff3cd !important;
+    border: 2px solid #ffc107;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+}
+
+.fila-editando:hover {
+    background-color: #fff3cd !important;
+}
+
+.btn-cancelar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    margin: 5px 0;
+    transition: background-color 0.2s;
+}
+
+.btn-cancelar:hover {
+    background-color: #c82333;
+}
+
+#btn-cancelar-formulario {
+    background-color: #6c757d;
+    margin-top: 10px;
+}
+
+#btn-cancelar-formulario:hover {
+    background-color: #5a6268;
+}
+
+/* ===== 11. RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 20px;
+    }
+    
+    .form-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    #tabla-pesajes {
+        font-size: 0.9em;
+    }
+    
+    #tabla-pesajes th,
+    #tabla-pesajes td {
+        padding: 6px;
+    }
+    
+    .crud-btn {
+        font-size: 0.9em;
+        margin: 2px;
+    }
+}

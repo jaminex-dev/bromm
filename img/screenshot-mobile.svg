@@ -1,0 +1,51 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo de la aplicación -->
+  <rect width="390" height="844" fill="#f8f9fa"/>
+  
+  <!-- Header -->
+  <rect width="390" height="80" fill="#2196f3"/>
+  <text x="195" y="50" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle" font-weight="bold">Báscula Minerales</text>
+  
+  <!-- Formulario de pesaje -->
+  <rect x="20" y="100" width="350" height="300" fill="white" stroke="#e0e0e0" stroke-width="1" rx="10"/>
+  
+  <!-- Título del formulario -->
+  <text x="195" y="130" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle" font-weight="bold">Registro de Pesaje</text>
+  
+  <!-- Campos del formulario -->
+  <rect x="40" y="150" width="310" height="40" fill="#f5f5f5" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="50" y="175" font-family="Arial, sans-serif" font-size="14" fill="#666">Código: MIN-001</text>
+  
+  <rect x="40" y="200" width="310" height="40" fill="#f5f5f5" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="50" y="225" font-family="Arial, sans-serif" font-size="14" fill="#666">Mineral: Cobre</text>
+  
+  <rect x="40" y="250" width="310" height="40" fill="#f5f5f5" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="50" y="275" font-family="Arial, sans-serif" font-size="14" fill="#666">Peso: 1,250.5 kg</text>
+  
+  <rect x="40" y="300" width="310" height="40" fill="#f5f5f5" stroke="#ddd" stroke-width="1" rx="5"/>
+  <text x="50" y="325" font-family="Arial, sans-serif" font-size="14" fill="#666">Operador: Juan Pérez</text>
+  
+  <!-- Botón de guardar -->
+  <rect x="40" y="350" width="310" height="40" fill="#2196f3" rx="5"/>
+  <text x="195" y="375" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Guardar Pesaje</text>
+  
+  <!-- Tabla de registros -->
+  <rect x="20" y="420" width="350" height="350" fill="white" stroke="#e0e0e0" stroke-width="1" rx="10"/>
+  
+  <!-- Título de la tabla -->
+  <text x="195" y="450" font-family="Arial, sans-serif" font-size="18" fill="#333" text-anchor="middle" font-weight="bold">Registros Recientes</text>
+  
+  <!-- Filas de la tabla -->
+  <rect x="40" y="470" width="310" height="30" fill="#f8f9fa"/>
+  <text x="50" y="490" font-family="Arial, sans-serif" font-size="12" fill="#333">MIN-001 | Cobre | 1,250.5 kg</text>
+  
+  <rect x="40" y="510" width="310" height="30" fill="white"/>
+  <text x="50" y="530" font-family="Arial, sans-serif" font-size="12" fill="#333">MIN-002 | Hierro | 2,100.0 kg</text>
+  
+  <rect x="40" y="550" width="310" height="30" fill="#f8f9fa"/>
+  <text x="50" y="570" font-family="Arial, sans-serif" font-size="12" fill="#333">MIN-003 | Zinc | 890.3 kg</text>
+  
+  <!-- Indicador offline -->
+  <rect x="20" y="800" width="350" height="30" fill="#ff9800" rx="5"/>
+  <text x="195" y="820" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">📱 Funcionando sin conexión</text>
+</svg>

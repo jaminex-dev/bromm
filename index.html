@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos para la aplicación PWA de pesajes -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aplicación PWA para registro de pesajes de minerales con sincronización offline/online">
+  
+  <!-- Título de la aplicación -->
+  <title>PWA Báscula de Minerales - MINEX</title>
+
+  
+  <!-- Favicon usando tu logo -->
+  <link rel="icon" type="image/png" href="img/logo-minex.png">
+  <link rel="apple-touch-icon" href="img/logo-minex.png">
+  
+  <!-- Meta tags para PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Báscula MINEX">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#2196F3">
+  
+  <!-- Estilos principales de la aplicación -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Manifiesto PWA para instalación -->
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- Librería PouchDB para base de datos local y sincronización -->
+  <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.3.1/dist/pouchdb.min.js"></script>
+  
+  <!-- SweetAlert2 para notificaciones y confirmaciones elegantes -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <!-- Alertify.js para notificaciones elegantes -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  
+  <!-- Script principal de la aplicación -->
+  <script type="module" src="js/app.js"></script>
+  
+  <!-- Registro del Service Worker para funcionalidad PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((registration) => {
+            console.log('Service Worker registrado exitosamente:', registration.scope);
+          })
+          .catch((error) => {
+            console.log('Error al registrar Service Worker:', error);
+          });
+      });
+    }
+  </script>
+</head>
+<body>
+  <!-- Contenedor principal de la aplicación -->
+  <div class="container">
+    
+    <!-- Sección del formulario de registro de pesajes -->
+    <div class="form-section">
+      <h2>Nuevo Pesaje</h2>
+      
+      <!-- Formulario para nuevo pesaje -->
+      <form id="form-pesaje">
+        <!-- Selector de producto mineral -->
+        <label for="producto">Producto Mineral</label>
+        <select id="producto" required>
+          <!-- Las opciones se cargan dinámicamente desde la API -->
+        </select>
+        
+        <!-- Campo de peso -->
+        <label for="peso">Peso (kg)</label>
+        <input type="number" id="peso" placeholder="Ingrese el peso en kilogramos" required min="0.1" step="0.1">
+        
+        <!-- Botón de envío -->
+        <button type="submit">Guardar Pesaje</button>
+      </form>
+      
+      <!-- Indicador de estado de sincronización -->
+      <div class="status" id="sync-status"></div>
+    </div>
+    
+    <!-- Sección de tabla de historial -->
+    <div class="table-section">
+      <h2>Historial de Pesajes</h2>
+      
+      <!-- Tabla de pesajes registrados -->
+      <table id="tabla-pesajes">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Peso (kg)</th>
+            <th>Fecha y Hora</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Los datos se cargan dinámicamente desde la base de datos -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <!-- Scripts de la aplicación -->
+  <script type="module" src="js/pouchdbService.js"></script>
+  <script type="module" src="js/app.js"></script>
+  
+  <!-- Registro del Service Worker para funcionalidad PWA -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(function(registration) {
+          console.log('Service Worker registrado exitosamente:', registration);
+        })
+        .catch(function(error) {
+          console.log('Error al registrar Service Worker:', error);
+        });
+    }
+  </script>
+</body>
+</html>
