@@ -29,6 +29,8 @@ const RECURSOS_CRITICOS = [
     './js/pouchdbService.js',
     './manifest.json',
     './img/logo-minex.png',
+    './img/logo-minex-192.png',
+    './img/logo-minex-512.png',
     './img/screenshot-mobile.svg',
     // CDNs externos críticos
     'https://cdn.jsdelivr.net/npm/pouchdb@7.3.1/dist/pouchdb.min.js',
